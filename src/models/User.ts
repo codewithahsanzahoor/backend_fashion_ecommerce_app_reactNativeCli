@@ -14,8 +14,8 @@ export interface IUser extends Document {
   paymentMethods?: {
     id: string;
     label: string;
-    type: string;
-    details: string;
+    icon?: string;
+    last4?: string;
   }[];
 }
 
@@ -37,8 +37,8 @@ const userSchema = new Schema(
       {
         id: { type: String },
         label: { type: String },
-        type: { type: String },
-        details: { type: String },
+        icon: { type: String },
+        last4: { type: String },
       },
     ],
   },

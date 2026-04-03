@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db';
 import authRoutes from './routes/authRoutes';
+import userRoutes from './routes/userRoutes';
 import productRoutes from './routes/productRoutes';
 import cartRoutes from './routes/cartRoutes';
 import orderRoutes from './routes/orderRoutes';
@@ -22,6 +23,7 @@ connectDB();
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/user', userRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/orders', orderRoutes);
