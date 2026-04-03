@@ -24,7 +24,7 @@ export const toggleWishlist = async (req: AuthRequest, res: Response) => {
       });
     } else {
       const productIndex = wishlist.products.findIndex(
-        (id) => id.toString() === productId
+        (id: any) => id.toString() === productId
       );
 
       if (productIndex > -1) {
