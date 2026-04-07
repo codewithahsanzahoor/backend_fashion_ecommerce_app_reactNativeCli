@@ -5,6 +5,7 @@ export interface IUser extends Document {
   email: string;
   password?: string;
   avatar?: string;
+  stripeCustomerId?: string;
   shippingAddresses?: {
     id: string;
     label: string;
@@ -25,6 +26,7 @@ const userSchema = new Schema(
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     avatar: { type: String },
+    stripeCustomerId: { type: String },
     shippingAddresses: [
       {
         id: { type: String },
